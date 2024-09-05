@@ -20,4 +20,15 @@ class StringGenerator {
 
         return $result;
     }
+
+    static public function generateArray(int $arraySize, int $stringLength) : array {
+        $result = [];
+
+        for ($i = 0; $i < $arraySize; $i++) {
+            array_push($result, self::generate($stringLength));
+        }
+
+
+        return $result;
+    }
 }

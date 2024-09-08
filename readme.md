@@ -4,8 +4,9 @@
 
 ## How to run
 
-- `composer install`
-- `php ./src/index.php`
+1. `composer install`
+2. `composer dump-autoload` if for some reason autoload fails or does not run.
+3. `php ./src/index.php`
 
 ## How to run tests
 

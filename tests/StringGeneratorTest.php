@@ -25,7 +25,6 @@ class StringGeneratorTest extends TestCase
     public function testGenerateArrayGeneratesArrayOfCorrectSize(): void
     {
         $stringLength = rand(1, 10);
-
         $arrayLength = rand(1, 10);
 
         $randomStringArray = Generators\StringGenerator::generateArray($arrayLength, $stringLength);

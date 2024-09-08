@@ -1,5 +1,5 @@
 <?php
-include_once("generators/String.php");
+include_once("generators/StringGenerator.php");
 
 
 use Generators\StringGenerator;

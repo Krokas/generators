@@ -1,12 +1,17 @@
 <?php
 
 namespace Generators;
+use Generators\Generator;
+use Converters\Converter;
 
-class StringGenerator {
-    private static string $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+class StringGenerator implements Generator
+{
+    const CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-    static public function generate(int $length) : string
-     {
+    private string $string;
+
+    public function __construct(int $length)
+    {
         $result = "";
 
         if ($length == 0) {
@@ -15,21 +20,20 @@ class StringGenerator {
 
         for ($i = 0; $i < $length; $i++)
         {
-            $randomCharacter = substr(self::$chars, rand(0, strlen(self::$chars) - 1), 1);
+            $randomCharacter = substr(self::CHARACTERS, rand(0, strlen(self::CHARACTERS) - 1), 1);
             $result .= $randomCharacter;
         }
 
-        return $result;
+        $this->string = $result;
     }
 
-    static public function generateArray(int $arraySize, int $stringLength) : array
+    public function get() : string
     {
-        $result = [];
+        return $this->string;
+    }
 
-        for ($i = 0; $i < $arraySize; $i++) {
-            array_push($result, self::generate($stringLength));
-        }
-
-        return $result;
+    public function applyConverter(Converter $converter) : void
+    {
+        $this->string = $converter->convert($this->string);
     }
 }

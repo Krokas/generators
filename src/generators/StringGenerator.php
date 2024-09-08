@@ -12,11 +12,11 @@ class StringGenerator implements Generator
 
     public function __construct(int $length)
     {
-        $result = "";
-
         if ($length == 0) {
             throw new \InvalidArgumentException("Length cannot be 0");
         }
+
+        $result = "";
 
         for ($i = 0; $i < $length; $i++)
         {

@@ -9,11 +9,11 @@ class AlphabeticalPositionsConverter implements Converter
 
     public function convert(string $string) : string
     {
-        $result = "";
-        
         if (strlen($string) == 0) {
             throw new \InvalidArgumentException("string length cannot be 0");
         }
+
+        $result = "";
 
         for ($i = 0; $i < strlen($string); $i++) {
             if (!ctype_alpha($string[$i])) {

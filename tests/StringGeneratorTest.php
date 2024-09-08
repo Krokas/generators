@@ -6,7 +6,7 @@ use Generators\StringGenerator;
 class StringGeneratorTest extends TestCase
 {
 
-    public function testGenerateCanGenerateCorrectLength(): void
+    public function testShouldGenerateStringOfCorrectLength(): void
     {
         $length = rand(1, 10);
 
@@ -16,7 +16,7 @@ class StringGeneratorTest extends TestCase
         $this->assertSame($length, strlen($randomString));
     }
 
-    public function testGenerateThrowsInvalidArgumentExceptionWhenLengthEqualsZero(): void
+    public function testShouldThrowExceptionWhenLengthEqualsZero(): void
     {
         $this->expectException(InvalidArgumentException::class);
 

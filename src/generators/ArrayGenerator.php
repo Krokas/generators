@@ -13,8 +13,6 @@ class ArrayGenerator implements Generator
         int $arraySize,
         int $stringLength)
     {
-        $result = [];
-
         if ($arraySize == 0) {
             throw new \InvalidArgumentException("array size cannot be 0");
         }
@@ -22,6 +20,8 @@ class ArrayGenerator implements Generator
         if ($stringLength == 0) {
             throw new \InvalidArgumentException("string size cannot be 0");
         }
+
+        $result = [];
 
         for ($i = 0; $i < $arraySize; $i++) {
             array_push($result, new StringGenerator($stringLength));

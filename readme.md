@@ -1,7 +1,11 @@
+## Dependecies
+- Composer
+- PHP 8
+
 ## How to run
 
 - `composer install`
--
+- `php ./src/index.php`
 
 ## How to run tests
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Converters;
+
 use App\Converters\Converter;
 
 class Rot13Converter implements Converter

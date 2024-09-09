@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Converters;
+
 use App\Converters\Converter;
 
-class AlphabeticalPositionsConverter implements Converter
+class AlphabeticalPositionConverter implements Converter
 {
     const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 

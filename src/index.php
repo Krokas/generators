@@ -5,7 +5,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 use App\Generators\StringGenerator;
 use App\Generators\ArrayGenerator;
-use App\Converters\AlphabeticalPositionsConverter;
+use App\Converters\AlphabeticalPositionConverter;
 use App\Converters\Rot13Converter;
 
 $container = new ContainerBuilder;
@@ -18,12 +18,12 @@ $container->register(StringGenerator::class, StringGenerator::class)
 $container->register(ArrayGenerator::class, ArrayGenerator::class)
     ->addArgument("%generator.array_size%")
     ->addArgument("%generator.string_length%");
-$container->register(AlphabeticalPositionsConverter::class, AlphabeticalPositionsConverter::class);
+$container->register(AlphabeticalPositionConverter::class, AlphabeticalPositionConverter::class);
 $container->register(Rot13Converter::class, Rot13Converter::class);
 
 
 $generatorCollection = [$container->get(StringGenerator::class), $container->get(ArrayGenerator::class)];
-$converters = [$container->get(AlphabeticalPositionsConverter::class), $container->get(Rot13Converter::class)];
+$converters = [$container->get(AlphabeticalPositionConverter::class), $container->get(Rot13Converter::class)];
 
 foreach($generatorCollection as $generator) {
     $randIndex = rand(0, count($converters) - 1);

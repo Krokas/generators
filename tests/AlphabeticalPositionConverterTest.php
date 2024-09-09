@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Converters\AlphabeticalPositionsConverter;
+use App\Converters\AlphabeticalPositionConverter;
 
 class AlphabeticalPositionConverterTest extends TestCase
 {
     public function testShouldCorrectlyConvertString() : void
     {
-        $converter = new AlphabeticalPositionsConverter;
+        $converter = new AlphabeticalPositionConverter;
         $convertedString = $converter->convert("22aAcd");
         
         $this->assertSame("22/1/1/3/4", $convertedString);
@@ -17,7 +17,7 @@ class AlphabeticalPositionConverterTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        $converter = new AlphabeticalPositionsConverter;  
+        $converter = new AlphabeticalPositionConverter;  
         $converter->convert("");
     }
 }

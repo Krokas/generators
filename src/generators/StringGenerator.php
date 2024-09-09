@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Generators;
+
 use App\Generators\Generator;
 use App\Converters\Converter;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Generators;
-use Generators\StringGenerator;
-use Generators\Generator;
-use Converters\Converter;
+namespace App\Generators;
+use App\Generators\StringGenerator;
+use App\Generators\Generator;
+use App\Converters\Converter;
 
 class ArrayGenerator implements Generator
 {

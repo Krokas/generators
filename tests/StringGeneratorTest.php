@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Generators\StringGenerator;
+use App\Generators\StringGenerator;
 
 class StringGeneratorTest extends TestCase
 {

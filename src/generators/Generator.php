@@ -1,8 +1,8 @@
 <?php
 
-namespace Generators;
+namespace App\Generators;
 
-use Converters\Converter;
+use App\Converters\Converter;
 
 interface Generator
 {

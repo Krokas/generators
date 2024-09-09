@@ -3,10 +3,10 @@ include_once(__DIR__."/../vendor/autoload.php");
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-use Generators\StringGenerator;
-use Generators\ArrayGenerator;
-use Converters\AlphabeticalPositionsConverter;
-use Converters\Rot13Converter;
+use App\Generators\StringGenerator;
+use App\Generators\ArrayGenerator;
+use App\Converters\AlphabeticalPositionsConverter;
+use App\Converters\Rot13Converter;
 
 $container = new ContainerBuilder;
 

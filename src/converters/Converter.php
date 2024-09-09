@@ -1,6 +1,6 @@
 <?php
 
-namespace Converters;
+namespace App\Converters;
 
 interface Converter
 {

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Converters\Rot13Converter;
+use App\Converters\Rot13Converter;
 
 class Rot13ConverterTest extends TestCase
 {

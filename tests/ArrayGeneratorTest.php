@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Generators\ArrayGenerator;
-use Generators\StringGenerator;
+use App\Generators\ArrayGenerator;
+use App\Generators\StringGenerator;
 
 class ArrayGeneratorTest extends TestCase
 {

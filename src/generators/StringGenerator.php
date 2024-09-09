@@ -1,8 +1,8 @@
 <?php
 
-namespace Generators;
-use Generators\Generator;
-use Converters\Converter;
+namespace App\Generators;
+use App\Generators\Generator;
+use App\Converters\Converter;
 
 class StringGenerator implements Generator
 {

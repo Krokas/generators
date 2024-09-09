@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Converters\AlphabeticalPositionsConverter;
+use App\Converters\AlphabeticalPositionsConverter;
 
 class AlphabeticalPositionConverterTest extends TestCase
 {
